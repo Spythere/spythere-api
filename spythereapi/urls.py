@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from base import views
+# from base import views
+
+from station_mgr.views import managerView
 
 urlpatterns = [
-    path('', views.index),
+    path('', managerView, name='manager'),
     path('admin/', admin.site.urls),
 ]
